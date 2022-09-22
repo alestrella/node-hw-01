@@ -3,7 +3,7 @@ const path = require("path");
 const { v4: uuidv4 } = require("uuid");
 var clc = require("cli-color");
 
-const contactsPath = path.resolve(__dirname, "db/contacts.json");
+const contactsPath = path.resolve("db/contacts.json");
 
 async function listContacts() {
   try {
@@ -32,8 +32,7 @@ async function removeContact(contactId) {
       return null;
     }
     const removedContact = contacts.splice(contactIndex, 1);
-    await fs.writeFile(contactsPath, JSON.stringify(contacts));
-    console.log(clc.green.bold.bgWhite("This contact is removed!"));
+    await fs.writeFile(contactsPath, JSON.stringify(contacts, null, " "));
     return removedContact;
   } catch (error) {
     console.log(clc.red.bgWhite("Failed to remove the contact"), error.message);
@@ -50,8 +49,7 @@ async function addContact(name, email, phone) {
     };
     const contacts = await listContacts();
     contacts.push(newContact);
-    await fs.writeFile(contactsPath, JSON.stringify(contacts));
-    console.log(clc.green.bold.bgWhite("This contact is saved successfully!"));
+    await fs.writeFile(contactsPath, JSON.stringify(contacts, null, " "));
     return newContact;
   } catch (error) {
     console.log(clc.red.bgWhite("Failed to save the contact"), error.message);

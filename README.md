@@ -5,7 +5,7 @@ Small command line tool to create ana manage contacts from your terminal.
 ## Get and display list of all contacts
 
 ```bash
-node index.js -a list\
+node index.js -a list
 ```
 
 An example output - [Screenshot](https://monosnap.com/file/ys941d2vYVD6Lg1khrn8jmgMOXwSte)

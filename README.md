@@ -1,11 +1,14 @@
-# Node.js CLI-application
+# Contact Manager CLI (Node.js)
+Small command line tool to create ana manage contacts from your terminal.
 
 
 ## Get and display list of all contacts
 
-`node index.js -a list`
+```bash
+node index.js -a list\
+```
 
-An example output - [Screenshot](https://monosnap.com/image/ys941d2vYVD6Lg1khrn8jmgMOXwSte)
+An example output - [Screenshot](https://monosnap.com/file/ys941d2vYVD6Lg1khrn8jmgMOXwSte)
 
 ## Add a contact
 
